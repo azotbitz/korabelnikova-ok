@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import {Button, CardActionArea, CardActions, Box, Container} from '@mui/material';
+import {Button, CardActionArea, CardActions, Box, Container, styled} from '@mui/material';
 import news1 from "../media/cards/1.png"
 import news2 from "../media/cards/2.png"
 import news3 from "../media/cards/3.png"
@@ -15,9 +15,30 @@ import news8 from "../media/cards/8.png"
 import news9 from "../media/cards/9.png"
 
 export const MultiActionAreaCard = () => {
+    const CustomContainer = styled(Container)(({ theme }) => ({
+        paddingTop: theme.spacing(5),
+        [theme.breakpoints.down("md")]: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+        },
+    }));
+
+    const CustomBox = styled(Box)(({ theme }) => ({
+        display: "flex",
+        justifyContent: "center",
+        [theme.breakpoints.down("md")]: {
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+            margin: theme.spacing(0,0,6,0),
+        },
+    }));
+
+
     return (
-        <Container sx={{}}>
-        <Box sx={{m: 5, display: "flex", justifyContent: "center", gap: "3rem"}}>
+        <CustomContainer>
+        <CustomBox sx={{m: 5, display: "flex", justifyContent: "center", gap: "3rem"}}>
             <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                     <CardMedia
@@ -90,9 +111,9 @@ export const MultiActionAreaCard = () => {
                     </Button>
                 </CardActions>
             </Card>
-        </Box>
+        </CustomBox>
 
-            <Box sx={{display: "flex", justifyContent: "center", gap: "3rem", m: 5}}>
+            <CustomBox sx={{display: "flex", justifyContent: "center", gap: "3rem", m: 5}}>
                 <Card sx={{ maxWidth: 345 }}>
                     <CardActionArea>
                         <CardMedia
@@ -165,9 +186,9 @@ export const MultiActionAreaCard = () => {
                         </Button>
                     </CardActions>
                 </Card>
-            </Box>
+            </CustomBox>
 
-            <Box sx={{display: "flex", justifyContent: "center", gap: "3rem", m: 5}}>
+            <CustomBox sx={{display: "flex", justifyContent: "center", gap: "3rem", m: 5}}>
                 <Card sx={{ maxWidth: 345 }}>
                     <CardActionArea>
                         <CardMedia
@@ -240,7 +261,7 @@ export const MultiActionAreaCard = () => {
                         </Button>
                     </CardActions>
                 </Card>
-            </Box>
-        </Container>
+            </CustomBox>
+        </CustomContainer>
     );
 }

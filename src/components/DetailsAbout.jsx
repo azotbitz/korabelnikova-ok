@@ -11,6 +11,7 @@ const Details = () => {
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       textAlign: "center",
+      margin: theme.spacing(1),
     },
   }));
 

@@ -13,6 +13,7 @@ const Details = () => {
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       textAlign: "center",
+      gap: theme.spacing(5),
     },
   }));
 
@@ -26,7 +27,7 @@ const Details = () => {
   }));
 
 
-  return <Box sx={{backgroundColor: "#ffffff", py: 10, minHeight: "50vh"}}>
+  return <Box sx={{backgroundColor: "#ffffff", py: 7, minHeight: "50vh"}}>
     <Container sx={{marginTop: "5vh"}} component={"div"}>
       <CustomBox>
         <ImgContainer>
@@ -45,10 +46,10 @@ const Details = () => {
           <Typography sx={{fontSize: "14px", color: "#141a1f", fontWeight: "500", my: 3}}>
             Главная задача нутрициолога заключается в том, чтобы помогать людям получать, анализировать и использовать информацию о здоровом питании для повышения качества жизни и профилактики заболеваний. В своей работе специалист учитывает большое число факторов, касающихся не только питания, но и, например, генетической предрасположенности, образа жизни, физической активности и так далее.
           </Typography>
-
+          <Box sx={{mt: 5}}>
           <Link to={"/contact"} style={{textDecoration: "none"}}><CustomButton backgroundColor="#a5d43e" color="#FFF"
                                                                                buttonText="Узнать больше" getStartedBtn={true}/></Link>
-
+          </Box>
         </Box>
       </CustomBox>
     </Container>

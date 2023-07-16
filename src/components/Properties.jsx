@@ -13,6 +13,9 @@ const Properties = () => {
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       alignItems: "center",
+      marginTop: theme.spacing(10),
+      paddingLeft: theme.spacing(0),
+      paddingRight: theme.spacing(0),
     },
   }));
 
@@ -22,10 +25,12 @@ const Properties = () => {
     paddingRight: theme.spacing(25),
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
+      paddingLeft: theme.spacing(0),
+      paddingRight: theme.spacing(0),
     },
   }));
 
-  return <Box sx={{backgroundColor: "#fff", py: 10, minHeight: "50vh"}}>
+  return <Box sx={{backgroundColor: "#fff", py: 7, minHeight: "40vh"}}>
     <Container>
       <PropertiesTextBox>
         <Typography sx={{fontSize: "35px", fontWeight: "500", color: "#000000"}}>

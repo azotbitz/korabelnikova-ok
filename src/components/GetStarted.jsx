@@ -37,30 +37,32 @@ const GetStarted = () => {
     margin: theme.spacing(0,2,0,2),
     [theme.breakpoints.down("md")]: {
       padding: "0",
+      marginBottom: theme.spacing(2),
     },
   }));
 
   const PropertiesBox = styled(Box)(({ theme }) => ({
     display: "flex",
-    justifyContent: "space-between",
-    paddingLeft: theme.spacing(25),
-    paddingRight: theme.spacing(25),
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
+    flexWrap: "wrap",
+    margin: theme.spacing(1),
+    marginBottom: theme.spacing(6),
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       alignItems: "center",
+      paddingLeft: theme.spacing(0),
+      paddingRight: theme.spacing(0),
+      marginBottom: theme.spacing(0),
     },
   }));
 
   const HouseBox = styled(Box)(({ theme }) => ({
-    maxWidth: 190,
-    height: "170px",
+    height: "185px",
     backgroundColor: "#ffffff",
     borderRadius: "1rem",
-    margin: theme.spacing(0,2,10,2),
+    margin: theme.spacing(6),
+    flex: "1 0 16%",
     [theme.breakpoints.down("md")]: {
-      margin: theme.spacing(2,0,2,0),
+      margin: theme.spacing(2,2,0,2),
     },
   }));
 
@@ -74,6 +76,7 @@ const GetStarted = () => {
   }));
 
   return <CustomBox>
+    <Container component={"div"} maxWidth="lg">
     <Box sx={{textAlign: "center"}}>
       <Typography sx={{fontSize: "35px", color: "#000", fontWeight: "500", my: 3}}>
         Самые полезные продукты
@@ -83,6 +86,7 @@ const GetStarted = () => {
         Мы подобрали самые полезные на наш взгляд овощи и фрукты
       </Typography>
     </Box>
+
         <PropertiesBox>
           <HouseBox>
             <ImgContainer>
@@ -147,9 +151,7 @@ const GetStarted = () => {
             </Box>
 
           </HouseBox>
-        </PropertiesBox>
 
-    <PropertiesBox>
       <HouseBox>
         <ImgContainer>
           <img src={veg5} alt="housePhoto" style={{width: "170px", height: "170px", maxWidth: "100%", borderRadius: "1rem"}} />
@@ -216,7 +218,7 @@ const GetStarted = () => {
     </PropertiesBox>
 
         <Link to={"/contact"} style={{display: "flex", justifyContent: "center", textDecoration: "none"}}><CustomButton backgroundColor="#a6d43f" color="#fff" buttonText="Узнать больше" getStartedBtn={true}/></Link>
-
+    </Container>
   </CustomBox>;
 };
 

@@ -167,9 +167,10 @@ export const Navbar = () => {
         </NavbarLinksBox>
       </Box>
 
-
-    <Link to={"/contact"} style={{textDecoration: "none"}}><CustomButton backgroundColor="#a5d43e" color="#FFF"
-                                                                         buttonText="Я заинтересовался" getStartedBtn={true}/></Link>
+    <NavbarLinksBox>
+    <Link to={"/contact"} style={{textDecoration: "none"}}>
+      <CustomButton backgroundColor="#a5d43e" color="#FFF" buttonText="Я заинтересовался" getStartedBtn={true}/></Link>
+    </NavbarLinksBox>
   </NavbarContainer>;
 };
 

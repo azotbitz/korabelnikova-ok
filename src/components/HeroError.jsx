@@ -41,10 +41,10 @@ const Hero = () => {
               <Title variant="h1">
                   Упс!
               </Title>
-              <Typography variant="body2" sx={{fontSize: "18px", color: "#5a6473", my: 4}}>
+              <Typography variant="body2" sx={{fontSize: "18px", color: "#141a1f", my: 4}}>
                 К сожалению вы задали несуществующий запрос. Вернитесь на главную страницу или воспользуйтесь навигацией слева вверху
               </Typography>
-              <Link to={"/"} style={{textDecoration: "none"}}><CustomButton backgroundColor="#908e86" color="#fff" buttonText="Вернуться на главную" heroBtn={true}/>
+              <Link to={"/"} style={{textDecoration: "none"}}><CustomButton backgroundColor="#141a1f" color="#fff" buttonText="Вернуться на главную" heroBtn={true}/>
             </Link>
             </Box>
             <Box sx={{flex: "1"}}>

@@ -53,7 +53,7 @@ const Hero = () => {
           </CustomBox>
         <CustomBox>
         <Box sx={{flex: "1.5"}}>
-          <Typography sx={{ fontSize: "35px", color: "#000", fontWeight: "500", textAlign: "center"}}>
+          <Typography sx={{paddingLeft: "1rem", paddingRight: "1rem", fontSize: "30px", color: "#000", fontWeight: "500", textAlign: "center"}}>
             Вы можете воспользоваться любым удобным для Вас способом связи
           </Typography>
         </Box>

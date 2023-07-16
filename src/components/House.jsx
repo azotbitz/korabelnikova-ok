@@ -10,7 +10,7 @@ const House = ({ img, price, address, bedrooms, bathrooms, space }) => {
     borderRadius: "1rem",
     margin: theme.spacing(0,2,0,2),
     [theme.breakpoints.down("md")]: {
-      margin: theme.spacing(2,0,2,0),
+
     },
   }));
 
